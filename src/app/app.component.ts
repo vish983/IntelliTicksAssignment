@@ -24,7 +24,19 @@ oneAdd = [];
   });
   }
   deleteLine = (index) => {
-    this.userArray.splice(index, 1);
+    Swal.fire({
+      icon: 'info',
+      text: 'Are you sure?'
+    }).then((result) => {
+      if (result.isConfirmed) {
+            this.userArray.splice(index, 1);
+            Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        );
+      }
+    });
   }
 
   openAddDialog = () => {
