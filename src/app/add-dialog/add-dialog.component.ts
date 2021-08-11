@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AppComponent } from '../app.component';
 
@@ -10,9 +10,9 @@ import { AppComponent } from '../app.component';
 })
 export class AddDialogComponent implements OnInit {
   addnewline = new FormGroup({
-    name: new FormControl(''),
-    discription: new FormControl(''),
-    size: new FormControl('')
+    name: new FormControl('', Validators.required),
+    discription: new FormControl('', Validators.required),
+    size: new FormControl('',  Validators.required)
   });
   constructor(public dialogRef: MatDialogRef<AddDialogComponent>) { }
 
