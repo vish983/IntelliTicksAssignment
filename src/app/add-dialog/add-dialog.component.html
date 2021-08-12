@@ -1,18 +1,27 @@
-<div class="row mx0"><div class="col-12">
-    <form [formGroup]="addnewline">
-        <mat-form-field appearance="fill">
-            <mat-label>Name</mat-label>
-            <input matInput formControlName = 'name'>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-            <mat-label>Discription</mat-label>
-            <input matInput formControlName = 'discription'>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-            <mat-label>Size</mat-label>
-            <input matInput formControlName = 'size'>
-        </mat-form-field>
-    </form>
-
-    <button mat-raised-button color = 'primary' (click)="takeData()">Add</button>
-</div></div>
+<div class="container ">
+    <div class="row mx-0 text-center">
+        <div class="col-12">
+            <h3>User Details</h3>
+        </div>
+    </div>
+    <div class="row mx-0 my-3 ">
+        <div class="col-12 text-center">
+            <form [formGroup]="addnewline">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName = 'name'>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Discription</mat-label>
+                    <input matInput formControlName = 'discription'>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Size</mat-label>
+                    <input matInput formControlName = 'size'>
+                </mat-form-field>
+            </form>
+    
+            <button mat-raised-button color = 'primary' (click)="takeData()" style="width: 60%;">Add</button>
+        </div>
+    </div>
+</div>
