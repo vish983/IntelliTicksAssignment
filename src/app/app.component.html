@@ -20,7 +20,7 @@
             <td>{{item.name}}</td>
             <td>{{item.company.name}}</td>
             <td>{{item.address.zipcode}}</td>
-            <td> <button class="btn btn-outline-danger btn-sm " (click)="deleteLine(i)">Delete</button></td>
+            <td> <button class="btn btn-outline-danger btn-sm " (click)="deleteLine(item.id, i)">Delete</button></td>
           </tr>
          </tbody> 
       </table>
